@@ -17,3 +17,6 @@ This is a sample node js tool to create tasks in Asana from the AWS well archite
    node index.js
    ```
 6. Once the code runs successfully, you should see the tasks and sub tasks created for the recommendations that are of 'HIGH' priority.
+
+### Asana tasks
+![Asana project with tasks](/images/asana.png)
