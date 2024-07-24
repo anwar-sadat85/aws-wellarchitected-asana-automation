@@ -11,8 +11,9 @@ This is a sample node js tool to create tasks in Asana from the AWS well archite
 1. Clone this repository.
 2. Replace all instances of <YOUR_ACCESS_TOKEN> with the Asana API token in the code base.
 3. Set the value for the projectIds variable in index.js with the value of the project GID from Asana.
-4. Run the following command
+4. Copy the content of the exported consolidated report into input/report.json file.
+5. Run the following command
    ```
    node index.js
    ```
-5. Once the code runs successfully, you should see the tasks and sub tasks created for the recommendations that are of 'HIGH' priority.
+6. Once the code runs successfully, you should see the tasks and sub tasks created for the recommendations that are of 'HIGH' priority.
