@@ -1,0 +1,494 @@
+{
+    "Metrics": [
+        {
+            "MetricType": "WORKLOAD",
+            "RiskCounts": {
+                "NOT_APPLICABLE": 4,
+                "HIGH": 13,
+                "UNANSWERED": 22,
+                "NONE": 9,
+                "MEDIUM": 9
+            },
+            "WorkloadId": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "WorkloadName": "Workload Name",
+            "WorkloadArn": "arn:aws:wellarchitected:<region>:<account>:workload/workloadId",
+            "UpdatedAt": "2024-07-16T10:39:17+12:00",
+            "Lenses": [
+                {
+                    "LensArn": "arn:aws:wellarchitected::aws:lens/wellarchitected",
+                    "Pillars": [
+                        {
+                            "PillarId": "sustainability",
+                            "RiskCounts": {
+                                "NOT_APPLICABLE": 0,
+                                "HIGH": 0,
+                                "UNANSWERED": 6,
+                                "NONE": 0,
+                                "MEDIUM": 0
+                            },
+                            "Questions": []
+                        },
+                        {
+                            "PillarId": "costOptimization",
+                            "RiskCounts": {
+                                "NOT_APPLICABLE": 0,
+                                "HIGH": 0,
+                                "UNANSWERED": 11,
+                                "NONE": 0,
+                                "MEDIUM": 0
+                            },
+                            "Questions": []
+                        },
+                        {
+                            "PillarId": "performance",
+                            "RiskCounts": {
+                                "NOT_APPLICABLE": 0,
+                                "HIGH": 0,
+                                "UNANSWERED": 5,
+                                "NONE": 0,
+                                "MEDIUM": 0
+                            },
+                            "Questions": []
+                        },
+                        {
+                            "PillarId": "reliability",
+                            "RiskCounts": {
+                                "NOT_APPLICABLE": 3,
+                                "HIGH": 5,
+                                "UNANSWERED": 0,
+                                "NONE": 3,
+                                "MEDIUM": 2
+                            },
+                            "Questions": [
+                                {
+                                    "QuestionId": "manage-service-limits",
+                                    "Risk": "MEDIUM",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "rel_manage_service_limits_automated_monitor_limits",
+                                            "ChoiceTitle": "Automate quota management"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "mitigate-interaction-failure",
+                                    "Risk": "HIGH",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "rel_mitigate_interaction_failure_graceful_degradation",
+                                            "ChoiceTitle": "Implement graceful degradation to transform applicable hard dependencies into soft dependencies"
+                                        },
+                                        {
+                                            "ChoiceId": "rel_mitigate_interaction_failure_throttle_requests",
+                                            "ChoiceTitle": "Throttle requests"
+                                        },
+                                        {
+                                            "ChoiceId": "rel_mitigate_interaction_failure_limit_retries",
+                                            "ChoiceTitle": "Control and limit retry calls"
+                                        },
+                                        {
+                                            "ChoiceId": "rel_mitigate_interaction_failure_fail_fast",
+                                            "ChoiceTitle": "Fail fast and limit queues"
+                                        },
+                                        {
+                                            "ChoiceId": "rel_mitigate_interaction_failure_client_timeouts",
+                                            "ChoiceTitle": "Set client timeouts"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "monitor-aws-resources",
+                                    "Risk": "HIGH",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "rel_monitor_aws_resources_monitor_resources",
+                                            "ChoiceTitle": "Monitor all components for the workload (Generation)"
+                                        },
+                                        {
+                                            "ChoiceId": "rel_monitor_aws_resources_notification_aggregation",
+                                            "ChoiceTitle": "Define and calculate metrics (Aggregation)"
+                                        },
+                                        {
+                                            "ChoiceId": "rel_monitor_aws_resources_notification_monitor",
+                                            "ChoiceTitle": "Send notifications (Real-time processing and alarming)"
+                                        },
+                                        {
+                                            "ChoiceId": "rel_monitor_aws_resources_automate_response_monitor",
+                                            "ChoiceTitle": "Automate responses (Real-time processing and alarming)"
+                                        },
+                                        {
+                                            "ChoiceId": "rel_monitor_aws_resources_end_to_end",
+                                            "ChoiceTitle": "Monitor end-to-end tracing of requests through your system"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "tracking-change-management",
+                                    "Risk": "HIGH",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "rel_tracking_change_management_planned_changemgmt",
+                                            "ChoiceTitle": "Use runbooks for standard activities such as deployment"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "backing-up-data",
+                                    "Risk": "MEDIUM",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "rel_backing_up_data_periodic_recovery_testing_data",
+                                            "ChoiceTitle": "Perform periodic recovery of the data to verify backup integrity and processes"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "testing-resiliency",
+                                    "Risk": "HIGH",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "rel_testing_resiliency_playbook_resiliency",
+                                            "ChoiceTitle": "Use playbooks to investigate failures"
+                                        },
+                                        {
+                                            "ChoiceId": "rel_testing_resiliency_test_non_functional",
+                                            "ChoiceTitle": "Test scaling and performance requirements"
+                                        },
+                                        {
+                                            "ChoiceId": "rel_testing_resiliency_failure_injection_resiliency",
+                                            "ChoiceTitle": "Test resiliency using chaos engineering"
+                                        },
+                                        {
+                                            "ChoiceId": "rel_testing_resiliency_game_days_resiliency",
+                                            "ChoiceTitle": "Conduct game days regularly"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "planning-for-recovery",
+                                    "Risk": "HIGH",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "rel_planning_for_recovery_objective_defined_recovery",
+                                            "ChoiceTitle": "Define recovery objectives for downtime and data loss"
+                                        },
+                                        {
+                                            "ChoiceId": "rel_planning_for_recovery_disaster_recovery",
+                                            "ChoiceTitle": "Use defined recovery strategies to meet the recovery objectives"
+                                        },
+                                        {
+                                            "ChoiceId": "rel_planning_for_recovery_dr_tested",
+                                            "ChoiceTitle": "Test disaster recovery implementation to validate the implementation"
+                                        },
+                                        {
+                                            "ChoiceId": "rel_planning_for_recovery_config_drift",
+                                            "ChoiceTitle": "Manage configuration drift at the DR site or Region"
+                                        },
+                                        {
+                                            "ChoiceId": "rel_planning_for_recovery_auto_recovery",
+                                            "ChoiceTitle": "Automate recovery"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "PillarId": "operationalExcellence",
+                            "RiskCounts": {
+                                "NOT_APPLICABLE": 0,
+                                "HIGH": 4,
+                                "UNANSWERED": 0,
+                                "NONE": 3,
+                                "MEDIUM": 4
+                            },
+                            "Questions": [
+                                {
+                                    "QuestionId": "priorities",
+                                    "Risk": "MEDIUM",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "ops_priorities_eval_threat_landscape",
+                                            "ChoiceTitle": "Evaluate threat landscape"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "observability",
+                                    "Risk": "HIGH",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "ops_observability_identify_kpis",
+                                            "ChoiceTitle": "Identify key performance indicators"
+                                        },
+                                        {
+                                            "ChoiceId": "ops_observability_application_telemetry",
+                                            "ChoiceTitle": "Implement application telemetry"
+                                        },
+                                        {
+                                            "ChoiceId": "ops_observability_customer_telemetry",
+                                            "ChoiceTitle": "Implement user experience telemetry"
+                                        },
+                                        {
+                                            "ChoiceId": "ops_observability_dependency_telemetry",
+                                            "ChoiceTitle": "Implement dependency telemetry"
+                                        },
+                                        {
+                                            "ChoiceId": "ops_observability_dist_trace",
+                                            "ChoiceTitle": "Implement distributed tracing"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "mit-deploy-risks",
+                                    "Risk": "MEDIUM",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "ops_mit_deploy_risks_auto_testing_and_rollback",
+                                            "ChoiceTitle": "Automate testing and rollback"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "ready-to-support",
+                                    "Risk": "HIGH",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "ops_ready_to_support_const_orr",
+                                            "ChoiceTitle": "Ensure a consistent review of operational readiness"
+                                        },
+                                        {
+                                            "ChoiceId": "ops_ready_to_support_use_runbooks",
+                                            "ChoiceTitle": "Use runbooks to perform procedures"
+                                        },
+                                        {
+                                            "ChoiceId": "ops_ready_to_support_use_playbooks",
+                                            "ChoiceTitle": "Use playbooks to investigate issues"
+                                        },
+                                        {
+                                            "ChoiceId": "ops_ready_to_support_informed_deploy_decisions",
+                                            "ChoiceTitle": "Make informed decisions to deploy systems and changes"
+                                        },
+                                        {
+                                            "ChoiceId": "ops_ready_to_support_enable_support_plans",
+                                            "ChoiceTitle": "Create support plans for production workloads"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "workload-observability",
+                                    "Risk": "HIGH",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "ops_workload_observability_create_alerts",
+                                            "ChoiceTitle": "Create actionable alerts"
+                                        },
+                                        {
+                                            "ChoiceId": "ops_workload_observability_analyze_workload_metrics",
+                                            "ChoiceTitle": "Analyze workload metrics"
+                                        },
+                                        {
+                                            "ChoiceId": "ops_workload_observability_analyze_workload_traces",
+                                            "ChoiceTitle": "Analyze workload traces"
+                                        },
+                                        {
+                                            "ChoiceId": "ops_workload_observability_create_dashboards",
+                                            "ChoiceTitle": "Create dashboards"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "operations-health",
+                                    "Risk": "MEDIUM",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "ops_operations_health_measure_ops_goals_kpis",
+                                            "ChoiceTitle": "Measure operations goals and KPIs with metrics"
+                                        },
+                                        {
+                                            "ChoiceId": "ops_operations_health_communicate_status_trends",
+                                            "ChoiceTitle": "Communicate status and trends to ensure visibility into operation"
+                                        },
+                                        {
+                                            "ChoiceId": "ops_operations_health_review_ops_metrics_prioritize_improvement",
+                                            "ChoiceTitle": "Review operations metrics and prioritize improvement"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "event-response",
+                                    "Risk": "HIGH",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "ops_event_response_process_per_alert",
+                                            "ChoiceTitle": "Have a process per alert"
+                                        },
+                                        {
+                                            "ChoiceId": "ops_event_response_dashboards",
+                                            "ChoiceTitle": "Communicate status through dashboards"
+                                        },
+                                        {
+                                            "ChoiceId": "ops_event_response_auto_event_response",
+                                            "ChoiceTitle": "Automate responses to events"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "evolve-ops",
+                                    "Risk": "MEDIUM",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "ops_evolve_ops_metrics_review",
+                                            "ChoiceTitle": "Perform operations metrics reviews"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "PillarId": "security",
+                            "RiskCounts": {
+                                "NOT_APPLICABLE": 1,
+                                "HIGH": 4,
+                                "UNANSWERED": 0,
+                                "NONE": 3,
+                                "MEDIUM": 3
+                            },
+                            "Questions": [
+                                {
+                                    "QuestionId": "securely-operate",
+                                    "Risk": "HIGH",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "sec_securely_operate_updated_threats",
+                                            "ChoiceTitle": "Stay up to date with security threats and recommendations"
+                                        },
+                                        {
+                                            "ChoiceId": "sec_securely_operate_implement_services_features",
+                                            "ChoiceTitle": "Evaluate and implement new security services and features regularly"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "identities",
+                                    "Risk": "HIGH",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "sec_identities_secrets",
+                                            "ChoiceTitle": "Store and use secrets securely"
+                                        },
+                                        {
+                                            "ChoiceId": "sec_identities_audit",
+                                            "ChoiceTitle": "Audit and rotate credentials periodically"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "permissions",
+                                    "Risk": "MEDIUM",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "sec_permissions_define_guardrails",
+                                            "ChoiceTitle": "Define permission guardrails for your organization"
+                                        },
+                                        {
+                                            "ChoiceId": "sec_permissions_continuous_reduction",
+                                            "ChoiceTitle": "Reduce permissions continuously"
+                                        },
+                                        {
+                                            "ChoiceId": "sec_permissions_analyze_cross_account",
+                                            "ChoiceTitle": "Analyze public and cross account access"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "detect-investigate-events",
+                                    "Risk": "MEDIUM",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "sec_detect_investigate_events_logs",
+                                            "ChoiceTitle": "Capture logs, findings, and metrics in standardized locations"
+                                        },
+                                        {
+                                            "ChoiceId": "sec_detect_investigate_events_noncompliant_resources",
+                                            "ChoiceTitle": "Initiate remediation for non-compliant resources"
+                                        },
+                                        {
+                                            "ChoiceId": "sec_detect_investigate_events_security_alerts",
+                                            "ChoiceTitle": "Correlate and enrich security events"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "data-classification",
+                                    "Risk": "HIGH",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "sec_data_classification_identify_data",
+                                            "ChoiceTitle": "Understand your data classification scheme"
+                                        },
+                                        {
+                                            "ChoiceId": "sec_data_classification_define_protection",
+                                            "ChoiceTitle": "Apply data protection controls based on data sensitivity"
+                                        },
+                                        {
+                                            "ChoiceId": "sec_data_classification_lifecycle_management",
+                                            "ChoiceTitle": "Define scalable data lifecycle management"
+                                        },
+                                        {
+                                            "ChoiceId": "sec_data_classification_auto_classification",
+                                            "ChoiceTitle": "Automate identification and classification"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "incident-response",
+                                    "Risk": "HIGH",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "sec_incident_response_develop_management_plans",
+                                            "ChoiceTitle": "Develop incident management plans"
+                                        },
+                                        {
+                                            "ChoiceId": "sec_incident_response_prepare_forensic",
+                                            "ChoiceTitle": "Prepare forensic capabilities"
+                                        },
+                                        {
+                                            "ChoiceId": "sec_incident_response_playbooks",
+                                            "ChoiceTitle": "Develop and test security incident response playbooks"
+                                        },
+                                        {
+                                            "ChoiceId": "sec_incident_response_run_game_days",
+                                            "ChoiceTitle": "Run simulations"
+                                        },
+                                        {
+                                            "ChoiceId": "sec_incident_response_pre_deploy_tools",
+                                            "ChoiceTitle": "Pre-deploy tools"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "QuestionId": "application-security",
+                                    "Risk": "MEDIUM",
+                                    "BestPractices": [
+                                        {
+                                            "ChoiceId": "sec_appsec_train_for_application_security",
+                                            "ChoiceTitle": "Train for application security"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "RiskCounts": {
+                        "NOT_APPLICABLE": 4,
+                        "HIGH": 13,
+                        "UNANSWERED": 22,
+                        "NONE": 9,
+                        "MEDIUM": 9
+                    }
+                }
+            ],
+            "LensesAppliedCount": 1
+        }
+    ]
+}
