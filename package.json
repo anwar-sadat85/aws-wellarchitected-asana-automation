@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "asana": "^3.0.7"
+    "asana": "^3.0.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.7.0",
